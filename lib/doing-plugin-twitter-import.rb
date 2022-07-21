@@ -5,7 +5,7 @@
 # author: Brett Terpstra
 # url: https://brettterpstra.com
 module Doing
-  # Capture Thing import plugin
+  # Twitter import plugin
   class TwitterImport
     require 'time'
     require 'twitter'
@@ -21,10 +21,10 @@ module Doing
     end
 
     ##
-    ## Imports a Capture Thing folder
+    ## Imports a Twitter timeline as Doing entries
     ##
     ## @param      wwid     [WWID] WWID object
-    ## @param      path     [String] Path to Capture Thing folder
+    ## @param      path     [String] Not used
     ## @param      options  [Hash] Additional Options
     ##
     def self.import(wwid, path, options: {})
