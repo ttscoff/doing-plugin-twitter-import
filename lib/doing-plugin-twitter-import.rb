@@ -125,7 +125,7 @@ module Doing
 
       tweets.reverse.each do |tweet|
         last_id = tweet[:id] if tweet[:id]
-        date = Time.parse(tweet[:date].strftime('%Y-%m-%d %H:%M'))
+        date = Time.parse(tweet[:date].strftime('%Y-%m-%d %H:%M -0000')).localtime
         text = tweet[:title].dup
         text = text.force_encoding('utf-8') if text.respond_to? :force_encoding
         input = text.split("\n")
